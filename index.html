@@ -21,9 +21,9 @@
               sans: ['Be Vietnam Pro', 'Inter', 'sans-serif'],
             },
             colors: {
-              primary: '#EA580C', // Orange-600
-              secondary: '#1D4ED8', // Blue-700
-              background: '#F9FAFB', // Gray-50
+              primary: '#EA580C',
+              secondary: '#1D4ED8',
+              background: '#F9FAFB',
               surface: '#FFFFFF',
             },
             boxShadow: {
@@ -37,31 +37,48 @@
       };
     </script>
     <style>
-      /* Hide scrollbar for Chrome, Safari and Opera */
       .no-scrollbar::-webkit-scrollbar {
         display: none;
       }
-      /* Hide scrollbar for IE, Edge and Firefox */
       .no-scrollbar {
-        -ms-overflow-style: none; /* IE and Edge */
-        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none;
+        scrollbar-width: none;
       }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://aistudiocdn.com/react@^19.2.1/",
-    "react": "https://aistudiocdn.com/react@^19.2.1",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
-    "recharts": "https://aistudiocdn.com/recharts@^3.5.1",
-    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.10.1",
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0"
-  }
-}
-</script>
-</head>
+    <script type="importmap">
+    {
+      "imports": {
+        "react/": "https://aistudiocdn.com/react@^19.2.1/",
+        "react": "https://aistudiocdn.com/react@^19.2.1",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+        "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+        "recharts": "https://aistudiocdn.com/recharts@^3.5.1",
+        "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.10.1",
+        "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0"
+      }
+    }
+    </script>
+  </head>
   <body class="bg-gray-50 text-gray-900 antialiased">
     <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
+```
+
+---
+
+## 🔑 **Bước 3: Setup API Key trên Vercel**
+
+### **Cách 1: Qua Vercel Dashboard (Khuyến nghị)**
+
+1. **Truy cập project trên Vercel**
+   - Vào https://vercel.com/dashboard
+   - Chọn project của bạn
+
+2. **Thêm Environment Variables**
+   - Vào tab **Settings** → **Environment Variables**
+   - Thêm biến mới:
+```
+     Name:  GEMINI_API_KEY
+     Value: AIza... (API key của bạn)
