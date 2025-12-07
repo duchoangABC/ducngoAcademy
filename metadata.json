@@ -1,0 +1,5 @@
+{
+  "name": "LMS Lite - VTC",
+  "description": "A mobile-first Learning Management System featuring profile tracking, competency radar charts, lesson playback, and chat mentorship.",
+  "requestFramePermissions": []
+}
